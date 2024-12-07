@@ -14,7 +14,7 @@ const RolesList: React.FC<RolesListProps> = ({ roles, onDelete }) => (
         key={role.id}
         id={role.id}
         role={role.name}
-        users={role.usersAssigned}
+        users={role.usersAssigned ?? 0}
         isDefault={!role.isCustom}
         icon={roleIcons[role.roleIcon]?.disabled}
         onDelete={() => onDelete(role)}

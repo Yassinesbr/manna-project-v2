@@ -1,0 +1,129 @@
+aside {
+  color: #fff;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  gap: 71px;
+}
+
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.sidebar__menu-item-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar__bullet {
+  position: absolute;
+  left: 0;
+  width: 83px;
+  height: 100px;
+  transform-origin: right center;
+}
+
+.bullet-expand {
+  animation: bullet-expand 0.5s ease-out forwards;
+}
+
+.bullet-shrink {
+  animation: bullet-shrink 0.5s ease-out forwards;
+}
+
+@keyframes bullet-expand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes bullet-shrink {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.sidebar__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  height: 81px;
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Fade in animations for menu items */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sidebar__menu-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar__menu-icon-wrapper.selected {
+  background-color: var(--primary-dark-color);
+}
+
+.sidebar__menu-icon {
+  width: 20px;
+  height: 20px;
+  z-index: 15;
+}
+
+/* Delays for each menu item fade-in */
+.sidebar__menu-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.sidebar__menu-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.sidebar__menu-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.sidebar__menu-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.sidebar__menu-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.sidebar__menu-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.sidebar__menu-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.sidebar__menu-item:nth-child(8) {
+  animation-delay: 0.8s;
+}

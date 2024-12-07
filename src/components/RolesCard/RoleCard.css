@@ -1,0 +1,70 @@
+.role-card {
+  width: 303px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  padding: 16px;
+}
+
+.role-card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.role-card-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.role-card-edit-icons-container {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-icons {
+  height: 20px;
+  width: 20px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.role-card-profile-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.role-card-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.role-card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.role-card-body-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.users-icon {
+  height: 20px;
+  width: 20px;
+}

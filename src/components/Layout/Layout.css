@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar content";
+  height: 100vh;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  z-index: 8;
+}
+
+.top-bar {
+  grid-area: topbar;
+  background-color: #ececee;
+  color: white;
+  padding: 10px;
+  z-index: 6;
+  align-content: center;
+}
+
+.content {
+  grid-area: content;
+  padding: 24px;
+}

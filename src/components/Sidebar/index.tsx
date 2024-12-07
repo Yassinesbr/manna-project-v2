@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import mannaLogo from "../../assets/manna-logo.svg";
-import bulletSvg from "../../assets/bullet.svg";
 import {
   articleIcon,
   speedIcon,
@@ -12,6 +11,7 @@ import {
   autoAwesomeIcon,
   integrationIcon,
   settingIcon,
+  bulletIcon,
 } from "../../assets/index";
 import { rolesRoute } from "../../App";
 
@@ -80,7 +80,7 @@ const Sidebar: React.FC = () => {
             >
               {(showExpandBullet || showShrinkBullet) && (
                 <img
-                  src={bulletSvg}
+                  src={bulletIcon}
                   alt="selection bullet"
                   className={`sidebar__bullet ${
                     showExpandBullet ? "bullet-expand" : ""

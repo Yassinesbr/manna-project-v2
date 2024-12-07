@@ -11,9 +11,9 @@ import {
   autoAwesomeIcon,
   integrationIcon,
   settingIcon,
-  bulletIcon,
 } from "../../assets/index";
 import { rolesRoute } from "../../App";
+import MenuItem from "../MenuItem";
 
 interface MenuItem {
   path: string;
@@ -25,7 +25,7 @@ const Sidebar: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [prevActiveIndex, setPrevActiveIndex] = useState<number | null>(null);
 
-  const menuItems: MenuItem[] = [
+  const menuItems = [
     { path: "/page2", icon: speedIcon },
     { path: "/page3", icon: lockIcon },
     { path: rolesRoute, icon: groupIcon },
@@ -72,40 +72,16 @@ const Sidebar: React.FC = () => {
             index === prevActiveIndex && prevActiveIndex !== activeIndex;
 
           return (
-            <div
+            <MenuItem
               key={index}
-              className={`sidebar__menu-item-container${
-                isItemActive ? " active" : ""
-              }`}
-            >
-              {(showExpandBullet || showShrinkBullet) && (
-                <img
-                  src={bulletIcon}
-                  alt="selection bullet"
-                  className={`sidebar__bullet ${
-                    showExpandBullet ? "bullet-expand" : ""
-                  } ${showShrinkBullet ? "bullet-shrink" : ""}`}
-                  onAnimationEnd={() => handleAnimationEnd(index)}
-                />
-              )}
-              <Link
-                to={item.path}
-                className={`sidebar__menu-item${isItemActive ? " active" : ""}`}
-                onClick={() => handleClick(index)}
-              >
-                <div
-                  className={`sidebar__menu-icon-wrapper${
-                    isItemActive ? " selected" : ""
-                  }`}
-                >
-                  <img
-                    src={item.icon}
-                    alt="icon"
-                    className="sidebar__menu-icon"
-                  />
-                </div>
-              </Link>
-            </div>
+              path={item.path}
+              icon={item.icon}
+              isActive={isItemActive}
+              showExpandBullet={showExpandBullet}
+              showShrinkBullet={showShrinkBullet}
+              onClick={() => handleClick(index)}
+              onAnimationEnd={() => handleAnimationEnd(index)}
+            />
           );
         })}
       </div>
